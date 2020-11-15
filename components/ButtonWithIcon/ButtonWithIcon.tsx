@@ -13,11 +13,11 @@ const IconContainer = styled.div`
   font-size: 1.28rem;
   margin-right: 15px;
 
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 0 0 3px #4eae4a7f;
-  transition: box-shadow 0.3s ease-in-out;
 `;
 
-const Container = styled.button`
+const Container = styled.a`
   background: none;
   color: inherit;
   border: none;
@@ -26,14 +26,17 @@ const Container = styled.button`
   cursor: pointer;
   outline: inherit;
   text-align: left;
+  text-decoration: none !important;
 
   display: flex;
   align-items: center;
   font-size: 1.28rem;
   font-weight: 500;
   line-height: 1.45;
+  transition: all 0.3s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #4eae4a;
 
     & ${IconContainer} {
@@ -42,10 +45,10 @@ const Container = styled.button`
   }
 `;
 
-type Props = StyledComponentProps<"button", any, {}, never> & {
+type Props = StyledComponentProps<"a", any, {}, never> & {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
 };
 
 const ButtonWithIcon: React.FC<Props> = ({
@@ -57,7 +60,7 @@ const ButtonWithIcon: React.FC<Props> = ({
 }) => {
   return (
     <Container {...rest}>
-      <IconContainer>{icon}</IconContainer>
+      {icon && <IconContainer>{icon}</IconContainer>}
       <div>
         <div>{title.toUpperCase()}</div>
         <div>{description}</div>
