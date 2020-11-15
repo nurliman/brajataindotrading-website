@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": false
+        //"preprocess": false
+      }
+    ],
+    ["inline-react-svg"]
+  ],
+  "presets": ["next/babel"]
+}
