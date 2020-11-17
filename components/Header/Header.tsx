@@ -6,8 +6,16 @@ import { faPhoneAlt, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import ButtonWithIcon from "../ButtonWithIcon";
 import NavBar from "../NavBar";
 
+const HeaderContainer = styled.header`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+`;
+
 const MainHeader = styled.div`
   width: 100%;
+  color: #fff;
 `;
 
 const TopBar = styled.div`
@@ -39,14 +47,14 @@ const ContactsAreaItem = styled.div`
 const Devider = styled.div`
   width: 90%;
   height: 1px;
-  background-color: black;
+  background-color: #fff;
   margin: 3px auto;
-  opacity: .18;
+  opacity: 0.18;
 `;
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <HeaderContainer>
       <MainHeader>
         <TopBar>
           <div>
@@ -82,7 +90,7 @@ const Header: React.FC = () => {
           <NavBar />
         </NavBarContainer>
       </MainHeader>
-    </header>
+    </HeaderContainer>
   );
 };
 
