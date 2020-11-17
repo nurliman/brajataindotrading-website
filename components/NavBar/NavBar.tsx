@@ -28,10 +28,10 @@ type SocialMediaItem = {
 const NavBar: React.FC = () => {
   const navItems: NavItem[] = [
     { text: "Beranda", link: "/" },
-    { text: "Layanan Produk", link: "/services" },
-    { text: "Investasi", link: "/invest" },
+    { text: "Layanan", link: "/services" },
+    { text: "Investasi", link: "/investment" },
     { text: "Kerjasama Kemitraan", link: "/partnership" },
-    { text: "Artikel", link: "/article" },
+    { text: "Artikel", link: "/articles" },
     { text: "Profil Kami", link: "/profile" },
   ];
 
@@ -44,15 +44,15 @@ const NavBar: React.FC = () => {
   return (
     <NavBarContainer role="navigation">
       <NavItemsContainer>
-        {navItems.map((item) => (
-          <NavItem>
+        {navItems.map((item, index) => (
+          <NavItem key={`navItem-${index}`}>
             <ButtonTextUnderline>{item.text}</ButtonTextUnderline>
           </NavItem>
         ))}
       </NavItemsContainer>
       <SocialMedia>
-        {socialMediaItems.map((item) => (
-          <SocialMediaItem>
+        {socialMediaItems.map((item, index) => (
+          <SocialMediaItem key={`socmed-${index}`}>
             <SocialMediaLink href={item.link}>{item.element}</SocialMediaLink>
           </SocialMediaItem>
         ))}
