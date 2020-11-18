@@ -13,9 +13,16 @@ export const siteTitle =
 type LayoutProps = {
   children: React.ReactNode;
   home?: boolean;
+  headerForLightBackground?: boolean;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children, home }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  home,
+  headerForLightBackground,
+}) => {
+  headerForLightBackground = Boolean(headerForLightBackground);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -33,7 +40,7 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header />
+      <Header lightBackground={headerForLightBackground} />
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
