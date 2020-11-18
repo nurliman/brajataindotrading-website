@@ -1,10 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 import ButtonWithIcon from "../ButtonWithIcon";
 import NavBar from "../NavBar";
+
+type Props = {
+  lightBackground?: boolean;
+};
+
+const DEFAULT_TEXT_COLOR = "#fff";
+const LIGHT_BACKGROUND_TEXT_COLOR = "#101820";
 
 const HeaderContainer = styled.header`
   position: absolute;
@@ -13,9 +20,13 @@ const HeaderContainer = styled.header`
   right: 0;
 `;
 
-const MainHeader = styled.div`
-  width: 100%;
-  color: #fff;
+const MainHeader = styled.div<Props>`
+  ${(props) => css`
+    width: 100%;
+    color: ${props.lightBackground && props.lightBackground
+      ? LIGHT_BACKGROUND_TEXT_COLOR
+      : DEFAULT_TEXT_COLOR};
+  `}
 `;
 
 const TopBar = styled.div`
@@ -44,18 +55,25 @@ const ContactsAreaItem = styled.div`
   }
 `;
 
-const Devider = styled.div`
+const Devider = styled.div<Props>`
   width: 90%;
   height: 1px;
-  background-color: #fff;
+  background-color: ${(props) =>
+    css`
+      ${props.lightBackground && props.lightBackground
+        ? LIGHT_BACKGROUND_TEXT_COLOR
+        : DEFAULT_TEXT_COLOR}
+    `};
   margin: 3px auto;
   opacity: 0.18;
 `;
 
-const Header: React.FC = () => {
+const Header: React.FC<Props> = ({ lightBackground }) => {
+  lightBackground = Boolean(lightBackground);
+
   return (
     <HeaderContainer>
-      <MainHeader>
+      <MainHeader lightBackground={lightBackground}>
         <TopBar>
           <div>
             <h3>BRAJATA INDOTRADING</h3>
@@ -85,7 +103,7 @@ const Header: React.FC = () => {
             </ContactsAreaItem>
           </ContactsArea>
         </TopBar>
-        <Devider />
+        <Devider lightBackground={lightBackground} />
         <NavBarContainer>
           <NavBar />
         </NavBarContainer>
