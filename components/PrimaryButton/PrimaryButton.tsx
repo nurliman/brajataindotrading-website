@@ -10,7 +10,7 @@ type Props = {
 const PRIMARY_COLOR = "#4eae4a";
 const LIGHT_COLOR = "#ffffff";
 const PRIMARY_TEXT_COLOR = "#ffffff";
-const LIGHT_TEXT_COLOR = "#100c08";
+const LIGHT_TEXT_COLOR = "#101820";
 
 const Container = styled.button<Props>`
   ${(props) => css`
