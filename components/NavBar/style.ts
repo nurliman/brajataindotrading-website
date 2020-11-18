@@ -66,7 +66,7 @@ export const ButtonTextUnderline = styled.button`
 
   display: inline-block;
   position: relative;
-  opacity: 0.7;
+  opacity: 0.88;
   transition: opacity 0.2s ease-in-out;
 
   &:after {
