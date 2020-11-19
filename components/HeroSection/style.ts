@@ -4,8 +4,8 @@ export const HeroSection = styled.section<{ imageUrl?: string }>`
   min-height: 100vh;
   height: fit-content;
   width: 100%;
-  padding: 138px 0;
-  padding-top: 188px;
+  padding: 58px 0;
+  padding-top: 168px;
 
   display: flex;
   justify-content: center;
@@ -45,6 +45,7 @@ export const HeroSubTitle = styled.h2`
 
 export const HeroText = styled.span`
   padding: 0 250px;
+  font-weight:400;
   & p {
     font-size: 1.38rem;
     margin-bottom: 5px;
@@ -57,5 +58,33 @@ export const HeroCTAs = styled.div`
 
   & > *:first-child {
     margin-right: 25px;
+  }
+`;
+
+export const Indicators = styled.ol`
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 35px;
+`;
+
+export const IndicatorsDot = styled.li`
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+
+  margin-inline-end: 7px;
+
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-inline-end: unset;
   }
 `;
