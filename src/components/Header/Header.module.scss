@@ -1,0 +1,50 @@
+.headerContainer {
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.topBarContainer {
+  background-color: #0a0a0a;
+  background-image: url(/assets/top-bar-background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 3.3rem 0 3.3rem 0;
+}
+
+.topBarInnerContainer {
+  display: flex;
+  flex-direction: row;
+  line-height: 3rem;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.topbarSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topBarLeftSection {
+  @extend .topbarSection;
+  align-items: flex-start;
+}
+
+.topBarMiddleSection {
+  @extend .topbarSection;
+  align-items: center;
+}
+
+.topBarRightSection {
+  @extend .topbarSection;
+  align-items: flex-end;
+}
+
+.link {
+  font-family: "Titillium Web";
+  color: #c4c4c4;
+  text-decoration: none;
+}
