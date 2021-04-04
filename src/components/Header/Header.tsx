@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import cn from "classnames";
 import Menu from "../Menu";
 import styles from "./Header.module.scss";
 
-const Header: React.FC = () => {
+const Header = forwardRef<HTMLElement>((props, ref) => {
   return (
-    <header className={styles.headerContainer}>
+    <header ref={ref} className={styles.headerContainer}>
       <section className={styles.topBarContainer}>
         <div className={cn(styles.topBarInnerContainer, "inner-gap")}>
           <div className={styles.topBarLeftSection}>
@@ -36,6 +36,6 @@ const Header: React.FC = () => {
       </section>
     </header>
   );
-};
+});
 
 export default Header;
