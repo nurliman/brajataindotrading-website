@@ -12,7 +12,7 @@ export const Head: React.FC<Props> = ({ children, title }) => (
       href={
         "https://fonts.googleapis.com/css2" +
         "?family=Raleway:wght@400" +
-        "&family=Titillium+Web:wght@400;700" +
+        "&family=Titillium+Web:wght@300;400;700" +
         "&display=swap"
       }
     />

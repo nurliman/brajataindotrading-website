@@ -1,0 +1,69 @@
+.container {
+  background: #0a0a0a;
+}
+
+.servicesList {
+  display: flex;
+  padding: 0;
+  margin-top: -4rem;
+}
+
+.serviceItem {
+  flex: 1;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+
+  &:nth-child(1) {
+    justify-content: flex-start;
+  }
+
+  &:nth-child(2) {
+    justify-content: center;
+  }
+
+  &:nth-child(3) {
+    justify-content: flex-end;
+  }
+}
+
+.serviceItemInner {
+  max-width: 350px;
+  width: 350px;
+}
+
+.serviceImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+}
+
+.serviceName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  overflow: hidden;
+  padding: 3.6rem 0;
+
+  background-color: #1a1a1a;
+  background-image: url(http://wpdemo.archiwp.com/theratio/wp-content/uploads/sites/5/2020/04/bg-features.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: #a3a3a3;
+
+  & > h6 {
+    margin: 0;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}

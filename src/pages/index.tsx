@@ -1,7 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
+import SectionServices from "../components/HomePage/SectionServices";
+import SectionSlider from "../components/HomePage/SectionSlider";
+import "keen-slider/keen-slider.min.css";
 
 const HomePage: React.FC = () => {
   return (
@@ -13,12 +15,8 @@ const HomePage: React.FC = () => {
       }}
     >
       <Header />
-      <h1>Hello Next.js 👋</h1>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
+      <SectionSlider />
+      <SectionServices />
     </Layout>
   );
 };
