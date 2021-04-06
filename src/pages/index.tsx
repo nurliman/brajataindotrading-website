@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import SectionServices from "../components/HomePage/SectionServices";
 import SectionSlider from "../components/HomePage/SectionSlider";
+import SectionCompanyProfile from "../components/HomePage/SectionCompanyProfile";
 import "keen-slider/keen-slider.min.css";
 
 const HomePage: React.FC = () => {
@@ -29,6 +30,7 @@ const HomePage: React.FC = () => {
         }}
       />
       <SectionServices />
+      <SectionCompanyProfile />
     </Layout>
   );
 };

@@ -13,6 +13,7 @@ export const Head: React.FC<Props> = ({ children, title }) => (
         "https://fonts.googleapis.com/css2" +
         "?family=Raleway:wght@400" +
         "&family=Titillium+Web:wght@300;400;700" +
+        "&family=Josefin+Sans:wght@600" +
         "&display=swap"
       }
     />
